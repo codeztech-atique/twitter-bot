@@ -1,0 +1,21 @@
+{
+  "name": "twitterbot_with_nodejs",
+  "version": "1.0.0",
+  "description": "twitter bot with nodejs - retwitt, like and follow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "with",
+    "nodejs"
+  ],
+  "author": "atique ahmed (codeztech)",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "twit": "^2.2.11"
+  }
+}
