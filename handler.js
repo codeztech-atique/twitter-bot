@@ -17,12 +17,12 @@ const varTwit = new twit({
 //     access_token_secret: config.twitter_officialAccount.access_token_secret,
 // });
 // function retweet() {
-exports.handler.twitterBot = async function(event, context, callback) {
+module.exports.twitterBot = (event, context, callback) => {
     let params = {
         // q:'#100DaysOfCode OR #coronavirus OR #CommunityShield min_retweets:20 lang:en',
         q:'#100DaysOfCode OR #Trending OR #codenewbies OR #codinglife OR #CodeNewbie OR #GirlsWhoCode OR #coronavirus OR #javascript  min_retweets:20 lang:en',
         result_type:'recent',
-        count:200
+        count:150
     }
     varTwit.get('search/tweets', params,(err,data,response)=>
     {
@@ -36,9 +36,11 @@ exports.handler.twitterBot = async function(event, context, callback) {
                 varTwit.post('favorites/create', {id: retweetId}, (err, response)=>
                 {
                     if (response) {
+                        console.log('Post retweeted and Favorited!!! with retweetID - ' + retweetId);
                         return callback(null, 'Post retweeted and Favorited!!! with retweetID - ' + retweetId);
                     }
                     if (err) {
+                        console.log('Already RETWEETED...');
                         return callback('Already RETWEETED...', null)
                     }
                 }))

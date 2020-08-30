@@ -29,7 +29,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/aws-lambda-twitter-personal-bot/production/1598778743281-2020-08-30T09:12:23.281Z/aws-lambda-twitter-personal-bot.zip"
+          "S3Key": "serverless/aws-lambda-twitter-personal-bot/production/1598779790637-2020-08-30T09:29:50.637Z/aws-lambda-twitter-personal-bot.zip"
         },
         "FunctionName": "aws-lambda-twitter-personal-bot-production-api",
         "Handler": "handler.twitterBot",
@@ -42,14 +42,14 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersion1b06gWhikVFuFTAnZVAszNwvhO4F78ilAUlqDBVr4iE": {
+    "ApiLambdaVersionlIHnLOjs66AEKRheL2rlfzckMCz38h5I2d62rZd4neI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "CkQHvfjfFpIznco3hmlGVBlG78wyVFplU0Nuz3LxBwE="
+        "CodeSha256": "r6nEifMA/qAsLKhScq9gJin4uxPORg8Sz/7T9VGMNgs="
       }
     }
   },
@@ -62,7 +62,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersion1b06gWhikVFuFTAnZVAszNwvhO4F78ilAUlqDBVr4iE"
+        "Ref": "ApiLambdaVersionlIHnLOjs66AEKRheL2rlfzckMCz38h5I2d62rZd4neI"
       }
     }
   }
