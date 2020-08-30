@@ -2,7 +2,7 @@
   "name": "twitterbot_with_nodejs",
   "version": "1.0.0",
   "description": "twitter bot with nodejs - retwitt, like and follow",
-  "main": "index.js",
+  "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,11 @@
   "author": "atique ahmed (codeztech)",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.742.0",
+    "aws-serverless-express": "^3.3.8",
     "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "serverless": "^1.80.0",
     "twit": "^2.2.11"
   }
 }
